@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: #e2e8f0;
+}
+
+/* background glow */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56,189,248,0.12), transparent);
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.4s;
+}
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.hero-sub {
+    color: #38bdf8;
+}
+.hero.shrink {
+    transform: scale(0.92);
+    opacity: 0.4;
+}
+
+/* sticky header */
+#stickyHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(2,6,23,0.9);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    display: none;
+    z-index: 1000;
+}
+
+/* sections */
+.section {
+    padding: 90px 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* cards */
+.card-custom {
+    background: rgba(30,41,59,0.6);
+    border-radius: 16px;
+    padding: 30px;
+    transition: 0.3s;
+}
+.card-custom:hover {
+    transform: translateY(-8px);
+}
+
+/* stats */
+.stat {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* fade animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* skills */
+.skill-box {
+    border: 1px solid #38bdf8;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* architecture */
+.arch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.connections {
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+.node {
+    min-width: 130px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #38bdf8;
+    text-align: center;
+}
+.node:hover {
+    background: #38bdf8;
+    color: black;
+}
+.api::after {
+    content: "";
+    height: 40px;
+    width: 2px;
+    background: #38bdf8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+.connections::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #38bdf8;
+    width: 100%;
+    top: -40px;
+}
+.db::before {
+    content: "";
+    height: 40px;
+    width: 2px;
+    background: #38bdf8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+}
+
+/* timeline */
+.timeline {
+    border-left: 2px solid #38bdf8;
+    padding-left: 20px;
+}
+.timeline-item {
+    margin-bottom: 25px;
+}
+
+/* contact */
+.contact-box {
+    background: rgba(30,41,59,0.6);
+    padding: 30px;
+    border-radius: 16px;
+}
