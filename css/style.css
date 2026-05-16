@@ -97,58 +97,6 @@ body::before {
     display: inline-block;
 }
 
-/* architecture */
-.arch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
-.connections {
-    display: flex;
-    gap: 60px;
-    position: relative;
-}
-.node {
-    min-width: 130px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: 1px solid #38bdf8;
-    text-align: center;
-}
-.node:hover {
-    background: #38bdf8;
-    color: black;
-}
-.api::after {
-    content: "";
-    height: 40px;
-    width: 2px;
-    background: #38bdf8;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100%;
-}
-.connections::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background: #38bdf8;
-    width: 100%;
-    top: -40px;
-}
-.db::before {
-    content: "";
-    height: 40px;
-    width: 2px;
-    background: #38bdf8;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 100%;
-}
-
 /* timeline */
 .timeline {
     border-left: 2px solid #38bdf8;
@@ -157,10 +105,76 @@ body::before {
 .timeline-item {
     margin-bottom: 25px;
 }
+.text-date {
+    color:#38bdf8;
+}
 
 /* contact */
 .contact-box {
     background: rgba(30,41,59,0.6);
     padding: 30px;
     border-radius: 16px;
+}
+/* PROJECTS */
+.project-card {
+    background: rgba(30,41,59,0.65);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    height: 100%;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h4 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.project-desc {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+.tech-stack {
+    margin-bottom: 20px;
+}
+
+.tech-stack span {
+    display: inline-block;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 0.85rem;
+}
+
+.work-section {
+    text-align: left;
+}
+
+.work-section h6 {
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.work-section ul {
+    padding-left: 18px;
+    color: #cbd5e1;
 }
